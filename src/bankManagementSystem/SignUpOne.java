@@ -1,21 +1,26 @@
 package bankManagementSystem;
+
 import javax.swing.*; // jframe available in swing;
 import java.awt.*; // color class available in awt;
-
+import java.awt.event.ActionEvent;
 import java.util.*; // to use random no , available in util package
 import com.toedter.calendar.JDateChooser;
+import java.awt.event.ActionListener;
 
-public class SignUpOne extends JFrame {
 
+public class SignUpOne extends JFrame implements ActionListener {
 
-    JTextField  FName, Email,  Address, State , City ,Pincode;
+    JTextField  Name,FName, Email,  Address, State , City ,Pincode;
+    long random;
+    JButton next;
+    JRadioButton male , female, others, married, single, widowed;
+    JDateChooser dateChooser;
     SignUpOne(){
-
         //to remove default layout
         setLayout(null);
 
         Random ran=new Random();
-        long random=Math.abs((ran.nextLong())%900L + 1000L);
+        random=Math.abs((ran.nextLong())%900L + 1000L);
 
         //application form
         JLabel formNo=new JLabel("Application Form no." + random);
@@ -36,10 +41,10 @@ public class SignUpOne extends JFrame {
         add(name);
 
         // name text field;
-        FName =new JTextField();
-        FName.setFont(new Font("Ralewey " , Font.BOLD, 14));
-        FName.setBounds(300,140, 400,30);
-        add(FName);
+        Name =new JTextField();
+        Name.setFont(new Font("Ralewey " , Font.BOLD, 14));
+        Name.setBounds(300,140, 400,30);
+        add(Name);
 
         //label Father's Name
         JLabel fathersName=new JLabel("Father's Name" );
@@ -60,7 +65,7 @@ public class SignUpOne extends JFrame {
         add(dob);
 
         // date calender field
-        JDateChooser dateChooser=new JDateChooser();
+        dateChooser=new JDateChooser();
         dateChooser.setBounds(300,240,400,30);
         add(dateChooser);
 
@@ -71,9 +76,9 @@ public class SignUpOne extends JFrame {
         add(gender);
 
         // gender radio buttons
-        JRadioButton male=new JRadioButton("MALE");
-        JRadioButton female=new JRadioButton("FEMALE");
-        JRadioButton others=new JRadioButton("OTHERS");
+        male=new JRadioButton("MALE");
+        female=new JRadioButton("FEMALE");
+        others=new JRadioButton("OTHERS");
 
         male.setBounds(300,290,90,30);
         female.setBounds(400,290,90,30);
@@ -117,13 +122,13 @@ public class SignUpOne extends JFrame {
 
 
         // marital status radio buttons, : married, single , widowed ;
-        JRadioButton married=new JRadioButton("Married");
+        married=new JRadioButton("Married");
         married.setBounds(300,390,90,30);
 
-        JRadioButton single=new JRadioButton("Single");
+        single=new JRadioButton("Single");
         single.setBounds(400,390,90,30);
 
-        JRadioButton widowed=new JRadioButton("Widowed");
+        widowed=new JRadioButton("Widowed");
         widowed.setBounds(500,390,90,30);
 
         married.setBackground(Color.WHITE);
@@ -189,11 +194,12 @@ public class SignUpOne extends JFrame {
 
 
         // next button
-        JButton next=new JButton("Next");
+        next=new JButton("Next");
         next.setBackground(Color.BLACK);
         next.setForeground(Color.WHITE);
         next.setFont(new Font("Ralewey", Font.BOLD, 14));
         next.setBounds(600,660,100,30);
+        next.addActionListener(this);
         add(next);
 
 
@@ -206,5 +212,62 @@ public class SignUpOne extends JFrame {
     public static void main(String[] args) {
 
         new SignUpOne();
+    }
+
+    public void actionPerformed(ActionEvent ae){
+        String formNo=""+random;
+        String name= Name.getText();  // getText() function retrieves the value entered in the text field;
+        String fname=FName.getText();
+        String dob=((JTextField)dateChooser.getDateEditor().getUiComponent()).getText();
+        String gender=null;
+        if(male.isSelected()){
+            gender="Male";
+        } else if (female.isSelected()) {
+            gender="Female";
+        } else if (others.isSelected()) {
+            gender="Others";
+        }
+
+        String email= Email.getText();
+        String marital=null;
+
+        if(married.isSelected()){
+            marital="Married";
+        } else if (single.isSelected()) {
+            marital="Single";
+        } else if (widowed.isSelected()) {
+            marital="Widowed";
+        }
+
+        String address=Address.getText();
+        String city=City.getText();
+        String state=State.getText();
+        String pincode=Pincode.getText();
+
+        try{
+            if(name.equals("")){
+                JOptionPane.showMessageDialog(null, "Name is Required");
+            }
+            else if (fname.equals("")) {
+                JOptionPane.showMessageDialog(null, "Father's Name is Required");
+            }
+
+            else{
+                Conn c=new Conn();
+                String query= "insert  into signup  values('"+formNo+"' , '"+name+"','"+fname+"' ,'"+dob+"', '"+gender+"', '"+email+"','"+marital+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
+                // Inset Into Signup(table -name) values;
+//                System.out.println(c);
+//                System.out.println(c.s);
+                // now to execute this query ;
+                c.s.executeUpdate(query);
+
+                //once data enterd to database then call singUp two class;
+                setVisible(false);
+                new SignUpTwo(formNo).setVisible(true);
+            }
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
     }
 }
