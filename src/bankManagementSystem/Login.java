@@ -1,8 +1,10 @@
 package bankManagementSystem;
 
 import javax.swing.*;
+import javax.xml.transform.Result;
 import java.awt.event.*;
 import java.awt.*;
+import java.sql.ResultSet;
 
 
 public class Login extends JFrame implements ActionListener
@@ -123,7 +125,27 @@ public class Login extends JFrame implements ActionListener
             }
 
             else if (ae.getSource()==login) {
-                
+                Conn c=new Conn();
+                String cardNo=cardTextField.getText();
+                String pinNo=pinTextField.getText();
+                String query="select * from login where CardNumber='"+cardNo+"' and Pin='"+pinNo+"'";
+
+                try{
+                    // result set class in pacakage sql , type of data returned form query is result set;
+                    ResultSet rs=c.s.executeQuery(query);
+
+                    // now check if data returned , then open transactions
+                    if(rs.next()){
+                        setVisible(false);
+                        new Transactions().setVisible(true);
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null,"Incorrect CardNumber or Pin");
+                    }
+                }
+                catch (Exception e){
+                    System.out.println(e);
+                }
             }
 
             else if (ae.getSource()==signUp) {

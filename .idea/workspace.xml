@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ccfbc19-bcca-44cf-921a-9bde32405279" name="Changes" comment="SignUp 2nd class created and database linked to the project.&#10;modification to login and signUp 1 to automatically call the next frame .">
-      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/SignUpThree.java" afterDir="false" />
+    <list default="true" id="0ccfbc19-bcca-44cf-921a-9bde32405279" name="Changes" comment="SignUp 3rd class created and database table linked to respective pages, also modified signup2 to open signup3 after next .">
+      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/Transactions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/SignUpTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/SignUpTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703873537812</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SignUp 3rd class created and database table linked to respective pages, also modified signup2 to open signup3 after next .">
+      <created>1704550982506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704550982506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,7 +103,8 @@
     <MESSAGE value="Login class created for BankManagement System." />
     <MESSAGE value="SignUp 1st page created." />
     <MESSAGE value="SignUp 2nd class created and database linked to the project.&#10;modification to login and signUp 1 to automatically call the next frame ." />
-    <option name="LAST_COMMIT_MESSAGE" value="SignUp 2nd class created and database linked to the project.&#10;modification to login and signUp 1 to automatically call the next frame ." />
+    <MESSAGE value="SignUp 3rd class created and database table linked to respective pages, also modified signup2 to open signup3 after next ." />
+    <option name="LAST_COMMIT_MESSAGE" value="SignUp 3rd class created and database table linked to respective pages, also modified signup2 to open signup3 after next ." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
