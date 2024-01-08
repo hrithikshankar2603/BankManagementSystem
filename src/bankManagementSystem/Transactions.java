@@ -8,8 +8,9 @@ import java.awt.event.ActionListener;
 public class Transactions extends JFrame  implements ActionListener {
 
     JButton deposit, withdrawal,fastCash, miniStatement, pinchange, balanceEniquiry, exit;
-    Transactions(){
-
+    String pinNo;
+    Transactions(String pinNo){
+        this.pinNo=pinNo;
         // insert the image icon of atm machine
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg")); //get system resource access files from system
         Image i2=i1.getImage().getScaledInstance(900,900,Image.SCALE_DEFAULT);
@@ -80,10 +81,18 @@ public class Transactions extends JFrame  implements ActionListener {
         if(ae.getSource()==exit){
             System.exit(0);
         }
+        else if (ae.getSource()==deposit){
+            setVisible(false);
+            new Withdrawal(pinNo).setVisible(true);
+        }
+        else if (ae.getSource()==withdrawal){
+            setVisible(false);
+            new Withdrawal(pinNo).setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
 
-        new Transactions();
+        new Transactions("");
     }
 }
