@@ -1,7 +1,6 @@
 package bankManagementSystem;
 
 import javax.swing.*;
-import javax.xml.transform.Result;
 import java.awt.event.*;
 import java.awt.*;
 import java.sql.ResultSet;

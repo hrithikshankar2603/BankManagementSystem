@@ -68,7 +68,7 @@ public class Withdrawal extends JFrame implements ActionListener {
                     c.s.executeUpdate(query);
                     JOptionPane.showMessageDialog(null, " Rs  "+ammountDeposited+"Withdrawal Successfully");
                     setVisible(false);
-                    new Transactions(pinNo).setVisible(true);
+                    new FastCash(pinNo).setVisible(true);
                 }
                 catch (Exception e){
                     System.out.println(e);

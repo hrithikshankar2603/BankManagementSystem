@@ -77,7 +77,7 @@ public class Deposit extends JFrame implements ActionListener {
         }
         else if(ae.getSource()==back){
             setVisible(false);
-            new Transactions(pinNo).setVisible(true);
+            new FastCash(pinNo).setVisible(true);
         }
     }
 
