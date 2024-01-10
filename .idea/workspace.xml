@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ccfbc19-bcca-44cf-921a-9bde32405279" name="Changes" comment="Two major operations of Deposit and Withdrawal created. Functions of Transaction class developed.">
-      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/FastCash.java" afterDir="false" />
+    <list default="true" id="0ccfbc19-bcca-44cf-921a-9bde32405279" name="Changes" comment="FastCash feature of the ATM Simulator was designed.">
+      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/PinChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/Deposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/Transactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/Transactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/Withdrawal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/Withdrawal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704723594635</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="FastCash feature of the ATM Simulator was designed.">
+      <created>1704871709503</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704871709503</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +127,8 @@
     <MESSAGE value="SignUp 3rd class created and database table linked to respective pages, also modified signup2 to open signup3 after next ." />
     <MESSAGE value="Transaction Class Created with transaction frame , also linked with login class and login table in database." />
     <MESSAGE value="Two major operations of Deposit and Withdrawal created. Functions of Transaction class developed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Two major operations of Deposit and Withdrawal created. Functions of Transaction class developed." />
+    <MESSAGE value="FastCash feature of the ATM Simulator was designed." />
+    <option name="LAST_COMMIT_MESSAGE" value="FastCash feature of the ATM Simulator was designed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
