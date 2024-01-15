@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ccfbc19-bcca-44cf-921a-9bde32405279" name="Changes" comment="FastCash feature of the ATM Simulator was designed.">
-      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/PinChange.java" afterDir="false" />
+    <list default="true" id="0ccfbc19-bcca-44cf-921a-9bde32405279" name="Changes" comment="Pin changing feature added to the project.">
+      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/BalanceEnquiry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bankManagementSystem/MiniStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bankManagementSystem/Transactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bankManagementSystem/Transactions.java" afterDir="false" />
     </list>
@@ -106,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704871709503</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Pin changing feature added to the project.">
+      <created>1704896641958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704896641958</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,7 +136,8 @@
     <MESSAGE value="Transaction Class Created with transaction frame , also linked with login class and login table in database." />
     <MESSAGE value="Two major operations of Deposit and Withdrawal created. Functions of Transaction class developed." />
     <MESSAGE value="FastCash feature of the ATM Simulator was designed." />
-    <option name="LAST_COMMIT_MESSAGE" value="FastCash feature of the ATM Simulator was designed." />
+    <MESSAGE value="Pin changing feature added to the project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pin changing feature added to the project." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
